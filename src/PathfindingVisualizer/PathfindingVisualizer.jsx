@@ -3,13 +3,13 @@ import Node from "./Node/Node";
 import { dijkstra, getNodesInShortestPathOrder } from "../algorithms/dijkstra";
 import "./PathfindingVisualizer.scss";
 
-const START_NODE_ROW = 5;
-const START_NODE_COL = 5;
-const FINISH_NODE_ROW = 25;
-const FINISH_NODE_COL = 15;
+const START_NODE_ROW = 10;
+const START_NODE_COL = 10;
+const FINISH_NODE_ROW = 40;
+const FINISH_NODE_COL = 40;
 
-const GRID_HEIGHT = 20;
-const GRID_WIDTH = 30;
+const GRID_HEIGHT = 50;
+const GRID_WIDTH = 50;
 const MAX_WEIGHT = 99;
 
 export default class PathfindingVisualizer extends Component {
@@ -46,14 +46,14 @@ export default class PathfindingVisualizer extends Component {
       if (i === visitedNodesInOrder.length) {
         setTimeout(() => {
           this.animateShortestPath(nodesInShortestPathOrder);
-        }, 10 * i);
+        }, 1 * i);
         return;
       }
       setTimeout(() => {
         const node = visitedNodesInOrder[i];
         document.getElementById(`node-${node.row}-${node.col}`).className =
           "node node__visited";
-      }, 10 * i);
+      }, 1 * i);
     }
   }
 
@@ -63,7 +63,7 @@ export default class PathfindingVisualizer extends Component {
         const node = nodesInShortestPathOrder[i];
         document.getElementById(`node-${node.row}-${node.col}`).className =
           "node node__shortestPath";
-      }, 50 * i);
+      }, 10 * i);
     }
   }
 
