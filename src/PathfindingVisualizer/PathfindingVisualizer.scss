@@ -1,0 +1,23 @@
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  h1,
+  h3 {
+    margin: 0px;
+    padding: 0;
+  }
+  button {
+    margin: 10px;
+  }
+}
