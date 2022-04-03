@@ -3,11 +3,18 @@
   height: 25px;
   border: 1px solid rgba(15, 168, 215, 0.278);
   //   border: 1px solid black;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
   &__finish {
     background-color: red;
   }
