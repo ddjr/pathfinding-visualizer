@@ -10,7 +10,7 @@ const FINISH_NODE_COL = 15;
 
 const GRID_HEIGHT = 20;
 const GRID_WIDTH = 30;
-const MAX_WEIGHT = 100;
+const MAX_WEIGHT = 99;
 
 export default class PathfindingVisualizer extends Component {
   constructor() {
