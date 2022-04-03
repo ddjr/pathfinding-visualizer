@@ -1,6 +1,8 @@
 .node {
-  width: 25px;
-  height: 25px;
+  width: 12px;
+  height: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
   border: 1px solid rgba(15, 168, 215, 0.278);
   //   border: 1px solid black;
   cursor: pointer;
@@ -20,10 +22,13 @@
   }
   &__start {
     background-color: green;
+    // width: 15px;
+    // height: 15px;
+    // overflow: visible;
   }
   &__visited {
     animation-name: visitedAnimation;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-timing-function: ease-out;
     animation-delay: 0;
     animation-direction: alternate;
@@ -48,27 +53,16 @@
 
   @keyframes visitedAnimation {
     0% {
-      //   transform: scale(0.3);
-      //   border-color: rgba(0, 0, 66, 0.75);
-      //   border-radius: 100%;
-      border: 3px solid rgba(238, 255, 0, 0.913);
+      border: 6px solid rgba(238, 255, 0, 0.913);
     }
-
     50% {
-      //   border-color: rgba(17, 104, 217, 0.75);
-      border: 3px solid rgba(246, 90, 212, 0.913);
+      border: 6px solid rgba(246, 90, 212, 0.913);
     }
-
     75% {
-      //   transform: scale(1.2);
-      border: 2px solid rgba(246, 58, 58, 0.75);
-      //   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border: 6px solid rgba(90, 129, 246, 0.913);
     }
     100% {
-      //   transform: scale(1);
-      border: 1px solid rgba(15, 168, 215, 0.278);
-
-      //   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      border: 6px solid rgba(28, 153, 211, 0.457);
     }
   }
 
