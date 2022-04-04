@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  background-color: black;
+  color: white;
+  height: 40px;
+  padding: 0 10px;
+  h2 {
+    margin: 0px;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: content-box;
+    height: 100%;
+    &__item {
+      box-sizing: content-box;
+      height: 100%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .MuiSvgIcon-root {
+        font-size: inherit;
+      }
+      &:hover {
+        box-sizing: border-box;
+        border-bottom: 3px solid #ce411a;
+        border-top: 3px solid transparent;
+      }
+    }
+    button {
+      color: #ce411a;
+      font-weight: 800;
+      font-size: large;
+      background-color: inherit;
+      border: 0px solid white;
+    }
+  }
+}

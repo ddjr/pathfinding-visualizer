@@ -1,9 +1,11 @@
 import "./App.scss";
+import Navbar from "./Navbar";
 import PathfindingVisualizer from "./PathfindingVisualizer/PathfindingVisualizer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+      <Navbar />
       <PathfindingVisualizer />
     </div>
   );
