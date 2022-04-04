@@ -31,7 +31,7 @@ export default class Node extends Component {
         onMouseUp={() => onMouseUp()}
         style={extraClassName === "" ? backgroundStyle(weight) : {}}
       >
-        {/* {extraClassName === "" ? weight : ""} */}
+        {extraClassName === "" ? weight : ""}
       </div>
     );
   }

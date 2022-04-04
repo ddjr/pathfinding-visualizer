@@ -5,12 +5,14 @@ import "./PathfindingVisualizer.scss";
 
 const START_NODE_ROW = 10;
 const START_NODE_COL = 10;
-const FINISH_NODE_ROW = 40;
-const FINISH_NODE_COL = 40;
+const FINISH_NODE_ROW = 20;
+const FINISH_NODE_COL = 20;
 
-const GRID_HEIGHT = 50;
-const GRID_WIDTH = 50;
+const GRID_HEIGHT = 30;
+const GRID_WIDTH = 30;
 const MAX_WEIGHT = 99;
+
+const ANIMATION_SPEED = 5;
 
 export default class PathfindingVisualizer extends Component {
   constructor() {
@@ -46,14 +48,14 @@ export default class PathfindingVisualizer extends Component {
       if (i === visitedNodesInOrder.length) {
         setTimeout(() => {
           this.animateShortestPath(nodesInShortestPathOrder);
-        }, 1 * i);
+        }, ANIMATION_SPEED * i);
         return;
       }
       setTimeout(() => {
         const node = visitedNodesInOrder[i];
         document.getElementById(`node-${node.row}-${node.col}`).className =
           "node node__visited";
-      }, 1 * i);
+      }, ANIMATION_SPEED * i);
     }
   }
 
@@ -63,7 +65,7 @@ export default class PathfindingVisualizer extends Component {
         const node = nodesInShortestPathOrder[i];
         document.getElementById(`node-${node.row}-${node.col}`).className =
           "node node__shortestPath";
-      }, 10 * i);
+      }, ANIMATION_SPEED * 3 * i);
     }
   }
 
