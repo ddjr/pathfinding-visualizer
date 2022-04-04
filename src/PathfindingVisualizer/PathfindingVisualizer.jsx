@@ -2,14 +2,15 @@ import React, { Component } from "react";
 import Node from "./Node/Node";
 import { dijkstra, getNodesInShortestPathOrder } from "../algorithms/dijkstra";
 import "./PathfindingVisualizer.scss";
+import Navbar from "../Navbar";
 
 const START_NODE_ROW = 10;
 const START_NODE_COL = 10;
-const FINISH_NODE_ROW = 20;
+const FINISH_NODE_ROW = 40;
 const FINISH_NODE_COL = 20;
 
 const GRID_HEIGHT = 30;
-const GRID_WIDTH = 30;
+const GRID_WIDTH = 50;
 const MAX_WEIGHT = 99;
 
 const ANIMATION_SPEED = 5;
@@ -83,11 +84,7 @@ export default class PathfindingVisualizer extends Component {
 
     return (
       <div className="container">
-        <h1>Shortest Path Visualization</h1>
-        <h3>Use mouse to add walls</h3>
-        <button onClick={() => this.visualizeDijkstra()}>
-          Run Dijkstra's Algorithm
-        </button>
+        <Navbar onClick={() => this.visualizeDijkstra()} />
         <div className="grid">
           {grid.map((row, rowIdx) => {
             return (
