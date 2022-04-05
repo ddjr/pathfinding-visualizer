@@ -1,5 +1,4 @@
 import "./App.scss";
-import Navbar from "./Navbar";
 import PathfindingVisualizer from "./PathfindingVisualizer/PathfindingVisualizer";
 
 function App() {
